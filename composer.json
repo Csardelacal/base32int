@@ -1,0 +1,20 @@
+{
+    "name": "magic3w/base32-int",
+    "description": "Base32 utility for url IDs",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "César de la Cal Bretschneider",
+            "email": "cesar@magic3w.com"
+        }
+    ],
+    "minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"magic3w\\support\\base32\\" : "./src/"
+		}
+	},
+    "require": {}
+}
