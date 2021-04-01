@@ -34,12 +34,24 @@
 class Base32Int
 {
 	
-	public static function encode($number) {
-		return strtoupper(base_convert($number, 10, 32));
+	/**
+	 * 
+	 * @param int $number
+	 * @return string
+	 */
+	public static function encode(int $number) : string
+	{
+		return strtoupper(base_convert((string)$number, 10, 32));
 	}
 	
-	public static function decode($number) {
-		return base_convert(strtoupper($number), 32, 10);
+	/**
+	 * 
+	 * @param string $number
+	 * @return int
+	 */
+	public static function decode(string $number) : int
+	{
+		return (int)base_convert(strtoupper($number), 32, 10);
 	}
 	
 }
