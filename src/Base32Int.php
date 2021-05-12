@@ -1,5 +1,7 @@
 <?php namespace magic3w\support\base32;
 
+use Exception;
+
 /* 
  * The MIT License
  *
@@ -51,6 +53,10 @@ class Base32Int
 	 */
 	public static function decode(string $number) : int
 	{
+		if (!preg_match('/^[A-Va-v0-9]+$/', $number)) {
+			throw new Exception('Invalid base 32 identifier');
+		}
+		
 		return (int)base_convert(strtoupper($number), 32, 10);
 	}
 	
