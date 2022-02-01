@@ -2,7 +2,7 @@
 
 use Exception;
 
-/* 
+/*
  * The MIT License
  *
  * Copyright 2018 César de la Cal Bretschneider <cesar@magic3w.com>.
@@ -30,14 +30,14 @@ use Exception;
  * Utility class that allows numbers to be converted into more human-friendly
  * identifiers. A base32 id is composed of uppercase characters and numbers that
  * are shorter and more accessible.
- * 
+ *
  * @author César de la Cal Bretschneider <cesar@magic3w.com>
  */
 class Base32Int
 {
 	
 	/**
-	 * 
+	 *
 	 * @param int $number
 	 * @return string
 	 */
@@ -47,7 +47,7 @@ class Base32Int
 	}
 	
 	/**
-	 * 
+	 *
 	 * @param string $number
 	 * @return int
 	 */
@@ -59,5 +59,4 @@ class Base32Int
 		
 		return (int)base_convert(strtoupper($number), 32, 10);
 	}
-	
 }
